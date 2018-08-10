@@ -7,7 +7,7 @@
 custom_solver_bias = 0.0
 points = PoolVector2Array( 0, -10, 8.66025, 5, -8.66025, 5 )
 
-[node name="Area2D" type="Area2D" index="0"]
+[node name="SnakeCell" type="Area2D" index="0"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -17,7 +17,9 @@ angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 1 )
-WIDTH = 10.0
+_sections_unfolded = [ "Pickable" ]
+WIDTH = 20.0
+COLLIDE_MARGIN = 5.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 
@@ -37,5 +39,7 @@ texture_scale = Vector2( 1, 1 )
 texture_rotation_degrees = 0.0
 invert_enable = false
 invert_border = 100.0
+
+[connection signal="area_entered" from="." to="." method="_on_SnakeCell_area_entered"]
 
 
