@@ -3,6 +3,8 @@ extends Area2D
 const SPEED = 100
 var velocity = Vector2()
 
+
+
 func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here
